@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 8 DIW - Carlos de la Torre-Verdejo Sola</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/estilo.css"/>
+</head>
+
+<body>
+    <h1>Inscripción a las X Jornadas Front-End</h1>
+    <p class="obl">Los campos señalados con * son obligatorios</p>
+    <div id="teclas">
+        <p>Información de teclas de acceso rápido - Accesibilidad teclado (pasar el ratón por aquí)</p>
+        <div id="caja">
+            <p class="pequeno">Antes de la tecla de atajo pulsar:<br/>
+                <span class="negr">En Firefox</span>: Mayusc. + Alt<br />
+                <span class="negr">En Opera</span>: Mayusc. + Esc<br />
+                <span class="negr">En Chrome, Safari y Edge</span>: Alt
+            </p>
+            <hr/>
+            <ul>
+                <li>n - Nombre</li>
+                <li>a - Apellidos</li>
+                <li>r - Correo electrónico</li>
+                <li>t - Teléfono</li>
+                <li>g - Subir fotografía</li>
+                <li>i - Texto interés</li>
+                <li>p - Actividad profesional</li>
+                <li>l - Talleres</li>
+                <li>u - Días 4 y 5 de mayo</li>
+                <li>c - Día 4 de mayo</li>
+                <li>o - Día 5 de mayo</li>
+                <li>h - Política de privacidad</li>
+                <li>v - Enviar formulario</li>
+            </ul>
+        </div>
+    </div>
+    <form action="#" method="get">
+        <fieldset class="grid">
+            <legend>Datos personales</legend>
+            <p>
+                <label for="nombre">Nombre <span class="obligatorio">*</span></label>
+                <input type="text" id="nombre" required accesskey="n" maxlength="25" title="Nombre - Letras mayúsculas o minúsculas, no números" pattern="[A-Za-z]">
+            </p>
+            <p>
+                <label for="apellidos">Apellidos <span class="obligatorio">*</span></label>
+                <input type="text" id="apellidos" required accesskey="a" maxlength="40" title="Apellidos - Letras mayúsculas o minúsculas, no números" pattern="[A-Za-z]">
+            </p>
+            <p>
+                <label for="correo">Correo electrónico <span class="obligatorio">*</span></label>
+                <input type="text" id="correo" required accesskey="r" maxlength="40" title="Correo electrónico - formato xxxx@.xx[x]" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            </p>
+            <p>
+                <label for="tlf">Teléfono <span class="obligatorio">*</span></label>
+                <input type="text" id="tlf" required accesskey="t" pattern="[0-9]{9}" title="Número de teléfono - 9 dígitos enteros">
+            </p>
+            <p>
+                <label for="foto">Fotografía para la acreditación</label>
+                <input type="file" name="foto" id="foto" accesskey="g" accept=".jpg,.png" multiple/>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Perfil de participante</legend>
+            <p>
+                <label for="interes">¿Por qué está interesado en participar? <span class="obligatorio">*</span></label>
+                <textarea name="interes" id="interes" required accesskey="i"></textarea>
+            </p>
+            <p>
+                <label for="actividad">Actividad profesional <span class="obligatorio">*</span></label>
+                <br/>
+                <select name="actividad" id="actividad" required accesskey="p" size="6">
+                    <option value="opcionDefecto" disabled selected hidden>Selecciona una actividad</option>
+                    <option value="bachiller">Estudiante de bachillerato</option>
+                    <option value="universidad">Estudiante universitario</option>
+                    <option value="profebach">Profesor de bachillerato</option>
+                    <option value="profeuni">Profesor universitario</option>
+                    <option value="otra">Otra actividad profesional</option>
+                </select>
+            </p>
+            <p>
+                <label for="talleres">¿En qué talleres está interesado? <span class="obligatorio">*</span></label>
+                <br/>
+                <small>Para seleccionar más de una opción, mantén pulsada la tecla de control (Windows)/Command(Mac) mientras haces click en las opciones</small>
+                <br/><br/>
+                <select multiple name="talleres" id="talleres" required accesskey="l">
+                    <option>La encriptación a lo largo de la historia</option>
+                    <option>Seguridad informática</option>
+                    <option>Redes sociales y teoría de grafos</option>
+                    <option>Matemáticas y azar</option>
+                    <option>Problemas de matemáticas del milenio</option>
+                    <option>La predicción del tiempo</option>
+                    <option>Fractales en el aula</option>
+                </select>
+            </p>
+            <p>
+                <label>Seleccione una de las tres opciones siguientes: <span class="obligatorio">*</span></label>
+                <br/>
+                <input type="radio" id="cuatroycinco" name="dias" accesskey="u"/>Asistiré los días 4 y 5 de mayo<br/>
+                <input type="radio" id="cuatro" name="dias" accesskey="c"/>Asistiré solo el día 4 de mayo<br/>
+                <input type="radio" id="cinco" name="dias" accesskey="o"/>Asistiré solo el día 5 de mayo
+            </p>
+        </fieldset>
+        <fieldset>
+            <input type="checkbox" name="checkbox" id="checkbox" required accesskey="h" title="Política de privacidad a aceptar obligatoriamente">He leído y acepto la <a href="">política de privacidad</a> y el <a href="">aviso legal</a> <span class="obligatorio">*</span>
+            <input type="submit" id="enviar" value="enviar" accesskey="v" title="Enviar los datos del formulario">
+        </fieldset>
+    </form>
+</body>
+
+</html>

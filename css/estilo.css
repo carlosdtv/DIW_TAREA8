@@ -1,0 +1,166 @@
+body {
+    height: 100%;
+    font-family: "Noto Sans", sans-serif;
+    background-color: #ab4493;
+}
+
+h1 {
+    text-align: center;
+}
+
+.obl {
+    text-align: center;
+}
+
+fieldset {
+    width: 600px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fbfbfb;
+    padding-left: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+legend {
+    font-size:1.60em;
+    font-weight: bold;
+    background-color: #ffffff;
+	border: 2px solid #ab4493;
+}
+
+input {
+    outline: 0;
+    background-color: #fbfbfb;
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ab4493;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+legend:hover {
+    background-color: rgb(145, 128, 5);
+}
+
+h1:hover {
+    font-size:3em;
+}
+
+input:hover {
+    background-color: #969696;
+}
+
+input[type=submit]:hover {
+    background-color: red;
+}
+
+textarea:focus {
+    background-color: #b0e8b4;
+}
+
+select:focus {
+    background-color: aqua;
+}
+
+#cuatroycinco, #cuatro, #cinco, #checkbox {
+    width: auto;
+    height: auto;
+}
+
+#foto {
+    grid-column: 1 / -1;
+    width: 190%;
+}
+
+#talleres {
+    height: 9em;
+}
+
+textarea {
+    outline: 0;
+    background-color: #fbfbfb;
+    width: 95%;
+    height: 150px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ab4493;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+label {
+    display: block;
+}
+input[type=submit] {
+    height: 45px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    background-color: #e8f900;
+    border-color: #000000;
+    border-style: solid;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+button p {
+    color: #fff;
+    margin-top: 10px;
+}
+span {
+    color: #ab4493;
+}
+
+#teclas{
+    text-align: center;
+}
+
+#caja{
+	position:absolute; 
+	top:52px; 
+	right:10px; 
+	background-color:rgb(255, 210, 237); 
+	border:2px dotted rgb(0, 0, 0); 
+	text-align:left; 
+	font-family:verdana; 
+	font-size:11px; 
+	padding:10px 20px 10px 0px;
+}
+
+#teclas  #caja{
+	display:none; 
+	position:absolute; 
+	float:left;
+}
+
+#teclas:hover #caja{display:block}
+
+.pequeno{
+	font-size: smaller;
+	font-style: italic;
+	padding-left: 10px;
+}
+.pequeno .negr{
+	font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    fieldset {
+        max-width: 90%;
+    }
+}
